@@ -1,0 +1,25 @@
+<p>addprovider works!</p>
+<ng-select class="mt-2"  [virtualScroll]='true' [items]="data"
+bindLabel="name"  placeholder="Select View" bindValue="id"
+dropdownPosition='bottom' [clearable]="false"></ng-select>
+
+<br>
+<h1>Date picker</h1>
+<form class="row row-cols-sm-auto">
+	<div class="col-12">
+		<div class="input-group">
+			<input
+				class="form-control"
+				placeholder="yyyy-mm-dd"
+				name="dp"
+				[(ngModel)]="model"
+				ngbDatepicker
+				#d="ngbDatepicker"
+			/>
+			<button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button">
+                <i
+                                class="fas fa-calendar-alt"></i>
+            </button>
+		</div>
+	</div>
+</form>

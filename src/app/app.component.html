@@ -1,0 +1,49 @@
+<!-- <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<button routerLink="/provider/add" class="btn btn-primary m-2">Add</button>
+<button routerLink="/provider/delete" class="btn btn-secondary m-2">Delete</button>
+<button routerLink="/settings/history" class="btn btn-secondary m-2">history</button>
+<button routerLink="/settings/user" class="btn btn-secondary m-2">usermangemnet</button>
+<button routerLink="/settings/table" class="btn btn-secondary m-2">Table</button>
+<router-outlet></router-outlet> -->
+
+<section class="example-container mat-elevation-z8" tabindex="0">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</section>
+    <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+  
+  <hr>
+
+  <hr>
+
+  
+  
+  
